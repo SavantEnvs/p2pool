@@ -1,0 +1,11 @@
+project: savantenvs/p2pool
+target: fuzz_sidechain
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sidechain/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_sidechain
+    libfuzzer: true
+    timeout: 5
